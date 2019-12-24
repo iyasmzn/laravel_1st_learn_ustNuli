@@ -19,3 +19,4 @@ Route::get('/test/{name?}', function($name = 'John'){
 });
 Route::get('/user', 'UserController@index');
 Route::get('category','CategoryController@index');
+Route::get('category/create','CategoryController@create');
