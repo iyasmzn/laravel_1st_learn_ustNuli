@@ -1,22 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Category | Create</title>
-</head>
-<body>
-	<form action="#" method="POST">
-		<tr>
-			<td>Name</td>
-			<td>:</td>
-			<td>
-				<input type="text" name="name" placeholder="Category name...">
-			</td>
-		</tr>
-		<tr>
-			<td colspan="3">
-				<button type="submit">Submit</button>
-			</td>
-		</tr>
-	</form>
-</body>
-</html>
+@extends('admin.layouts.app')
+
+@section('content')
+{{-- @if(session('success')) --}}
+        
+<div class="box">
+  <div class="box-body">
+      <form role="form" action="{{url('/category/store')}}" method="post">
+        @csrf
+        <div class="box-body">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="name" class="form-control" id="name" name="name" placeholder="Enter name">
+          </div>
+          <a href=""></a>
+        </div>
+        <a class="btn btn-warning" href="{{url('/category')}}"><i class="fa fa-arrow-left"></i> Back</a>
+        <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> Submit</button>      
+      </form>
+  </div>
+      <!-- /.box-body -->
+  <div class="box-footer">
+    Footer
+  </div>
+      <!-- /.box-footer-->
+</div>
+@endsection

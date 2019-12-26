@@ -7,13 +7,39 @@ use App\Models\Category;
 
 class CategoryController extends Controller
 {
-    public function index()
+	public function index()
+	{
+		$data['category'] = Category::orderBy('id', 'desc')->get();
+		return view('category.index', $data);
+	}
+	public function create()
+	{
+		return view('category.create');
+	}
+	public function store(Request $request) 
+	{
+		$data = new Category;
+		$data->name = $request->name;
+		$data->save();
+	return redirect('category')->with('success','Berhasil');
+	}
+    public function edit($id)
     {
-    	$data['category'] = Category::orderBy('id', 'desc')->get();
-    	return view('category.index', $data);
+        $category = Category::find($id);
+        return view('category.edit', ['category'=>$category]);
     }
-    public function create()
-    {
-    	return view('category.create');
-    }
+	public function update($id, Request $req)
+	{
+        $data = Category::find($id);
+        $data->name = $req->name;
+        $data->save();
+        return redirect('category');
+
+	}   
+	public function delete($id)
+	{
+        $data = Category::find($id);
+        $data->delete();
+	return redirect('category');
+	}
 }
