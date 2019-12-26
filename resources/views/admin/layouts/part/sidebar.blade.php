@@ -23,7 +23,7 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
-        <li>
+        <li class="active">
           <a href="{{url('/')}}">
             <i class="fa fa-home"></i> <span>Home</span>
           </a>

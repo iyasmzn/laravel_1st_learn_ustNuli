@@ -2,11 +2,11 @@
 
 @section('content')
 <div class="box">
-	<div class="box-header with-border">
+	<div class="box-header">
 		<a href="{{url('article/add')}}" class="btn btn-primary" title="collapse"><i class="fa fa-plus"></i> Add</a>
 	</div>
-	<div class="box-body">
-		<table class="table table-bordered">
+	<div class="box-body table-responsive">
+		<table class="table table-striped table-hover table-bordered">
 			<tr>
 				<th style="width: 10px">No</th>
         <th>Category</th>

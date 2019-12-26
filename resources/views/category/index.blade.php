@@ -2,7 +2,7 @@
 
 @section('content')
 	 <div class="box">
-		<div class="box-header with-border">
+		<div class="box-header">
 			@if(session('success'))
 				<div class="alert alert-info alert-dismissible">
 					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -14,11 +14,11 @@
 			  <i class="fa fa-plus"></i> Create
 			</a>
 		</div>
-		<div class="box-body">
-		  <table class="table table-bordered">
+		<div class="box-body table-responsive">
+		  <table class="table table-striped table-hover table-bordered">
 				<tr>
 				  <th style="width: 10px">No</th>
-				  <th>Name</th>
+				  <th>Category Name</th>
 				  <th style="width: 200px;text-align: center;">Action</th>
 				</tr>
 				@php
