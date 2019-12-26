@@ -17,6 +17,8 @@
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href='{{asset("AdminLTE-2.4.18/dist/css/skins/_all-skins.min.css")}}'>
+  <!-- iCheck for checkboxes and radio inputs -->
+  <link rel="stylesheet" href="{{asset('AdminLTE-2.4.18/plugins/iCheck/all.css')}}">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -27,6 +29,8 @@
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+<!-- Select2 -->
+  <link rel="stylesheet" href="{{asset('AdminLTE-2.4.18/bower_components/select2/dist/css/select2.min.css')}}">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <!-- Site wrapper -->
@@ -324,10 +328,29 @@
     <script src='{{asset("AdminLTE-2.4.18/dist/js/adminlte.min.js")}}'></script>
 <!-- AdminLTE for demo purposes -->
     <script src='{{asset("AdminLTE-2.4.18/dist/js/demo.js")}}'></script>
+<!-- CK Editor -->
+    <script src="{{asset('AdminLTE-2.4.18/bower_components/ckeditor/ckeditor.js')}}"></script>
+<!-- iCheck 1.0.1 -->
+    <script src="{{asset('AdminLTE-2.4.18/plugins/iCheck/icheck.min.js')}}"></script>
+<!-- Select2 -->
+    <script src="{{asset('AdminLTE-2.4.18/bower_components/select2/dist/js/select2.full.min.js')}}"></script>
 <script>
   $(document).ready(function () {
-    $('.sidebar-menu').tree()
-  })
+    $('.sidebar-menu').tree();
+
+    CKEDITOR.replace('content');
+    //Flat red color scheme for iCheck
+    $('input[type="checkbox"].flat-blue, input[type="radio"].flat-blue').iCheck({
+      checkboxClass: 'icheckbox_flat-green',
+      radioClass   : 'iradio_flat-blue'
+    });
+    $('input[type="checkbox"].flat-red, input[type="radio"].flat-orange').iCheck({
+      checkboxClass: 'icheckbox_flat-green',
+      radioClass   : 'iradio_flat-orange'
+    });
+    //Initialize Select2 Elements
+    $('.select2').select2();
+  });
 </script>
 </body>
 </html>

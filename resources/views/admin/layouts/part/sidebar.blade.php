@@ -49,7 +49,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="{{url('article')}}"><i class="fa fa-book"></i> Articles</a></li>
-            <li><a href="../tables/data.html"><i class="fa fa-plus-circle"></i> Add Article</a></li>
+            <li><a href="{{url('article/add')}}"><i class="fa fa-plus-circle"></i> Add Article</a></li>
           </ul>
         </li>
       </ul>
