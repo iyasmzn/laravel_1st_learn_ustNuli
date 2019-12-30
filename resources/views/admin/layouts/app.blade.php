@@ -328,8 +328,6 @@
     <script src='{{asset("AdminLTE-2.4.18/dist/js/adminlte.min.js")}}'></script>
 <!-- AdminLTE for demo purposes -->
     <script src='{{asset("AdminLTE-2.4.18/dist/js/demo.js")}}'></script>
-<!-- CK Editor -->
-    <script src="{{asset('AdminLTE-2.4.18/bower_components/ckeditor/ckeditor.js')}}"></script>
 <!-- iCheck 1.0.1 -->
     <script src="{{asset('AdminLTE-2.4.18/plugins/iCheck/icheck.min.js')}}"></script>
 <!-- Select2 -->
@@ -338,7 +336,6 @@
   $(document).ready(function () {
     $('.sidebar-menu').tree();
 
-    CKEDITOR.replace('content');
     //Flat red color scheme for iCheck
     $('input[type="checkbox"].flat-blue, input[type="radio"].flat-blue').iCheck({
       checkboxClass: 'icheckbox_flat-green',

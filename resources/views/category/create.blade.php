@@ -9,7 +9,7 @@
         @csrf
         <div class="box-body">
           <div class="form-group">
-            <label for="name">Name</label>
+            <label for="name">Category Name</label>
             <input type="name" class="form-control" id="name" name="name" placeholder="Enter name">
           </div>
           <a href=""></a>

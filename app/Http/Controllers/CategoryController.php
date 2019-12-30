@@ -18,10 +18,11 @@ class CategoryController extends Controller
 	}
 	public function store(Request $request) 
 	{
+        $this->validate($request ,['name' => 'required']);
 		$data = new Category;
 		$data->name = $request->name;
 		$data->save();
-	return redirect('category')->with('success','Berhasil');
+	return redirect('category')->with('success','Success adding Category!');
 	}
     public function edit($id)
     {
@@ -33,13 +34,13 @@ class CategoryController extends Controller
         $data = Category::find($id);
         $data->name = $req->name;
         $data->save();
-        return redirect('category');
+        return redirect('category')->with('updated','Update data success!');
 
 	}   
 	public function delete($id)
 	{
         $data = Category::find($id);
         $data->delete();
-	return redirect('category');
+	return redirect('category')->with('deleted','Delete data success!');
 	}
 }
