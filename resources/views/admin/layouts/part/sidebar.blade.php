@@ -30,6 +30,18 @@
         </li>
         <li class="treeview active">
           <a href="#">
+            <i class="fa fa-user"></i> <span>User</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{url('user/')}}"><i class="fa fa-users"></i> Users</a></li>
+            <li><a href="{{url('user/add')}}"><i class="fa fa-user-plus"></i> Add New User</a></li>
+          </ul>
+        </li>
+        <li class="treeview active">
+          <a href="#">
             <i class="fa fa-archive"></i> <span>Category</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>

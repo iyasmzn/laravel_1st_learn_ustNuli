@@ -94,6 +94,7 @@
       </h1>
       <ol class="breadcrumb">
         <li><a href="{{url('/')}}"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="{{url('/user')}}"><i class="fa fa-user"></i> User</a></li>
         <li><a href="{{url('category')}}"><i class="fa fa-archive"></i> Category</a></li>
         <li><a href="{{url('article')}}"><i class="fa fa-pencil"></i> Article</a></li>
       </ol>

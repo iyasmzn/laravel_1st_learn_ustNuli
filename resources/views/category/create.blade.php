@@ -1,7 +1,6 @@
 @extends('admin.layouts.app')
 
 @section('content')
-{{-- @if(session('success')) --}}
         
 <div class="box">
   <div class="box-body">
