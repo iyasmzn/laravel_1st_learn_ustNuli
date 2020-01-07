@@ -28,7 +28,7 @@
             value="{{$user->password}}">
 		  </div>
 		</div>
-		<a class="btn btn-warning" href="{{url('/category')}}"><i class="fa fa-arrow-left"></i> Back</a>
+		<a class="btn btn-warning" href="{{url('/user')}}"><i class="fa fa-arrow-left"></i> Back</a>
 		<button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> Submit</button>      
 	  </form>
   </div>

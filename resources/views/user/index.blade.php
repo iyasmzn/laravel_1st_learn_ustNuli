@@ -10,7 +10,7 @@
 		  <table class="table table-striped table-hover table-bordered">
 				<tr>
 				  <th style="width: 10px">No</th>
-                  <th>Name</th>
+				  <th>Name</th>
 				  <th>Email</th>
 				  <th style="width: 200px;text-align: center;">Action</th>
 				</tr>
@@ -20,8 +20,8 @@
 				@foreach($users as $row)
 					<tr>
 						<td>{{ $no++ }}</td>
-                        <td>{{ $row->name}}</td>
-                        <td>{{ $row->email}}</td>
+						<td>{{ $row->name}}</td>
+						<td>{{ $row->email}}</td>
 						<td style="text-align: center;">
 							<a href="{{url('user/edit/'.$row->id)}}" class="btn btn-xs btn-warning"><i class="fa fa-gear"></i> Edit</a>
 							<a href="{{url('user/delete/'.$row->id)}}" class="btn btn-xs btn-danger" onclick="javascript:return confirm('Are you sure want to DELETE this?');"><i class="fa fa-trash"></i> Delete</a>

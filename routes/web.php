@@ -22,6 +22,8 @@ Route::get('/user', 'UserController@index');
 Route::get('/user/add', 'UserController@add');
 Route::post('/user/store', 'UserController@store');
 Route::get('/user/edit/{id}', 'UserController@edit');
+Route::post('/user/update/{id}', 'UserController@update');
+Route::get('/user/delete/{id}', 'UserController@delete');
 // CATEGORY
 Route::get('category','CategoryController@index');
 Route::get('category/create','CategoryController@create');
