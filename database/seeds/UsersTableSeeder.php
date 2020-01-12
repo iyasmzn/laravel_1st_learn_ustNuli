@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Faker\Factory as Faker;
+use App\User;
 
 class UsersTableSeeder extends Seeder
 {
@@ -30,6 +31,12 @@ class UsersTableSeeder extends Seeder
                 'password' => $faker->password
             ]);
         }
+    // with ust Nuli
+        User::insert([
+            'name' => 'Budi'
+            'email' => 'budi@email.com'
+            'password' => encrypt(11111111)
+        ])
 
     }
 }
